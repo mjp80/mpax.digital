@@ -1,0 +1,28 @@
+{
+  "lockfileVersion": 1,
+  "name": "mpax.digital",
+  "description": "mpax.digital ------------",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server ./src",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./src --output-dir ./dist",
+    "deploy": "netlify deploy --prod --dir=./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjp80/mpax.digital.git"
+  },
+  "author": "Martin Paton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjp80/mpax.digital/issues"
+  },
+  "homepage": "https://github.com/mjp80/mpax.digital#readme",
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "http-server": "^0.12.3",
+    "netlify-cli": "^2.58.0"
+  }
+}
