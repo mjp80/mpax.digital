@@ -19,5 +19,4 @@ This deploys to Netlify.  You'll need to set an appropriate token up for your ow
 To get started
 --------------
 
-npm install
-npm run dev
+npm install && npm run dev
