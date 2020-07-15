@@ -5,221 +5,14 @@
     <title>Martin Paton's minimum viable website - about this site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="The website of Martin Paton, a technology leader based in Manchester, UK." />
-    <style type="text/css">
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        embed,
-        figure,
-        figcaption,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        output,
-        ruby,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section {
-            display: block;
-        }
-
-        body {
-            line-height: 1;
-        }
-
-        ol,
-        ul {
-            list-style: none;
-        }
-
-        blockquote,
-        q {
-            quotes: none;
-        }
-
-        blockquote:before,
-        blockquote:after,
-        q:before,
-        q:after {
-            content: '';
-            content: none;
-        }
-
-        a {
-            color: #531fff
-        }
-
-        a:hover {
-            color: #bb1122
-        }
-
-        a:visited {
-            color: #884488
-        }
-
-        a.current {
-            font-weight: bold
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        body {
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.5;
-            padding: 1rem;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 1rem;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            margin-top: 1.25rem;
-            margin-bottom: 1.25rem;
-            font-style: italic;
-        }
-
-        h3 {
-            font-weight: bold;
-            font-style: italic;
-            margin-bottom: 1.25rem;
-        }
-
-        footer {
-            margin-top: 1rem;
-            font-size: medium;
-        }
-
-        p {
-            clear: both;
-            margin-bottom: 1rem
-        }
-
-        li {
-            margin-left: 1rem;
-            list-style: circle
-        }
-
-        li p {
-            margin-bottom: 1.5rem;
-        }
-
-        li span {
-            display: block;
-        }
-
-        time {
-            font-weight: 600;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem 0 0;
-            padding: 0
-        }
-
-        code {font-family: 'Courier New', Courier, monospace; background-color:#eee}
-    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" /> 
 </head>
 
 <body>
     <nav>
         <ul>
             <li><a href="/">Homepage</a></li>
-            <li><a class="current" href="/about-this-site">About this site</a></li>
+            <li><a class="current" href="/about-this-site/">About this site</a></li>
         </ul>
     </nav>
     <section>
@@ -233,6 +26,10 @@
             denominator MVP of a website and then undertake a journey of modernising it and documenting the journey.</p>
         <h3>Latest updates</h3>
         <ul>
+            <li><span><time datetime="2020-07-15">15/07/2020</time> - CSS split</span>
+                <p>Simple update today.  CSS is now loaded from a separate stylesheet.  Best practice says I should probably inline it as well, but that's for another day.  Lighthouse still at 100, thankfully!</p>
+                <p>Next is to add some more design elements to make it more appealing.</p>
+            </li>
             <li><span><time datetime="2020-07-14">14/07/2020</time> - Build pipeline</span>
                 <p>The site now has the barebones of a modern dev & deployment pipeline set up.  I used <code>npm</code> to do it.  We have a static HTTP server now serving the dev site through <code>http-server</code>, and code is automatically minified via <code>html-minifier</code> and deployed via <a target="_blank" href="//netlify.com" rel="noopener">Netlify's</a> excellent CLI/API.</p>
                 <p>I'll probably split the CSS next, as it's becoming a pain to update both pages separately and inline it.  Hopefully my 100% Lighthouse scores won't fall.</p>
