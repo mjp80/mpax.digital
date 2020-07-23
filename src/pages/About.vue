@@ -1,32 +1,38 @@
 <template>
+<Layout>
 <div>
-  <Sidebar />
-  <Update />
-  <RichTextFragmentRenderer :fragmentref=$page.content />
+<RichTextFragmentRenderer :fragmentref=$page.about />
+<Update />
 </div>
+</Layout>
 </template>
 <script>
 
-import Sidebar from '~/components/Sidebar.vue'
 import Update from '~/components/Update.vue'
 import RichTextFragmentRenderer from '~/components/RichTextFragmentRenderer.vue'
+import Layout from '~/layouts/Default.vue'
 
 export default {
   components: {
-    Sidebar,
     Update,
+    Layout,
     RichTextFragmentRenderer
-  },
-  props: ['content']
+  },  
+  metaInfo() {
+    return {
+      title: this.$page.about.edges[0].node.title
+    }
+  }
 }
 </script>
 
 <page-query>
-{
-  content:allContentfulFragment {
+query{
+  about:allContentfulFragment(filter: { title: { eq: "About" }}) {
     edges {
       node {
       fragment
+      title
     }
     }
   }

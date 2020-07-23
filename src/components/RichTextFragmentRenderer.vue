@@ -9,12 +9,11 @@ export default {
  props: ['fragmentref'],
  methods: {
     richtextToHTML (content) {
-      console.log(content)
       if (typeof content.edges[0] !== 'undefined') {
       return documentToHtmlString(content.edges[0].node.fragment) 
       }
       else {
-        return 'Content not found'
+        return 'Content not found.'
       }
     }
   }

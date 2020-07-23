@@ -1,18 +1,34 @@
 <template>
-  <Layout>
-    <h1>Goff</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-  </Layout>
+<layout>
+<RichTextFragmentRenderer :fragmentref=$page.content />
+</layout>
 </template>
 <script>
 
+import RichTextFragmentRenderer from '~/components/RichTextFragmentRenderer.vue'
 import Layout from '~/layouts/Default.vue'
 
 export default {
   components: {
-    Layout
+    RichTextFragmentRenderer
+  },
+  metaInfo() {
+    return {
+      title: this.$page.content.edges[0].node.title
+    }
   }
 }
 </script>
+
+<page-query>
+{
+  content:allContentfulFragment(filter: { title: { eq: "Introduction" }}) {
+    edges {
+      node {
+      fragment
+      title
+    }
+    }
+  }
+}
+</page-query>

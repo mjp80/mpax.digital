@@ -1,25 +1,26 @@
 <template>
-  <div class="contact">
+<div>
+  <h2>Latest updates</h2>
     <div v-for="edge in $static.update.edges" :key="edge.node.id">
-      <h2>{{ edge.node.createdAt}} - {{ edge.node.title }}</h2>
-      <div v-html="richtextToHTML(edge.node.content)"></div>
+      <h3>{{ edge.node.created}} - {{ edge.node.title }}</h3>
+      <div v-html="richtextToHTML(edge.node.content)">
+        </div>
     </div>
-  </div>
+</div>
 </template>
 
 <static-query>
 {
-  update:allContentfulUpdate {
+  update:allContentfulUpdate(sortBy:"created") {
     edges {
       node {
         title
-        createdAt(format:"MMMM Do, YYYY")
+        created(format:"MMMM Do, YYYY")
         content
       }
     }
   }
 }
-
 </static-query>
 
 <script>
@@ -33,10 +34,4 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-.thumb {border-radius:150px; height:200px}
-
-</style>
 

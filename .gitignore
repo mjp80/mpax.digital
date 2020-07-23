@@ -1,6 +1,8 @@
 **/.DS_Store
 node_modules
-
+/src/.temp
 # Local Netlify folder
 .netlify
+.env
+.cache
 dist

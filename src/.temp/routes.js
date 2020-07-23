@@ -1,6 +1,6 @@
-const c1 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/mpax/dev/mpax.digital/src/pages/About.vue")
-const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/mpax/dev/mpax.digital/node_modules/gridsome/app/pages/404.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/mpax/dev/mpax.digital/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/martin.paton/dev/mpax.digital/src/pages/About.vue")
+const c2 = () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/martin.paton/dev/mpax.digital/node_modules/gridsome/app/pages/404.vue")
+const c3 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/martin.paton/dev/mpax.digital/src/pages/Index.vue")
 
 export default [
   {
