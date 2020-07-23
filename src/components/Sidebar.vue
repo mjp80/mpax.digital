@@ -4,8 +4,8 @@
   <ul>
     <li>Home</li>
     <li>About</li>
-    <ContactCard />
   </ul>
+  <RichTextFragmentRenderer :fragmentref=$static.contacts />
 </nav>
   </section>
 </template>
@@ -28,10 +28,12 @@ contacts: allContentfulContactCard {
 
 <script>
 import ContactCard from '~/components/ContactCard.vue'
+import RichTextFragmentRenderer from '~/components/RichTextFragmentRenderer.vue'
 
 export default {
   components: {
-    ContactCard
+    ContactCard,
+    RichTextFragmentRenderer
   }
 }
 </script>

@@ -2,20 +2,20 @@
 <div>
   <Sidebar />
   <Update />
-  <FragmentRenderer :fragmentref=$page.content />
+  <RichTextFragmentRenderer :fragmentref=$page.content />
 </div>
 </template>
 <script>
 
 import Sidebar from '~/components/Sidebar.vue'
 import Update from '~/components/Update.vue'
-import FragmentRenderer from '~/components/FragmentRenderer.vue'
+import RichTextFragmentRenderer from '~/components/RichTextFragmentRenderer.vue'
 
 export default {
   components: {
     Sidebar,
     Update,
-    FragmentRenderer
+    RichTextFragmentRenderer
   },
   props: ['content']
 }
@@ -24,9 +24,11 @@ export default {
 <page-query>
 {
   content:allContentfulFragment {
-    edges {node {
-    title
-    fragment}}
+    edges {
+      node {
+      fragment
+    }
+    }
   }
 }
 </page-query>
